@@ -11,10 +11,7 @@ server.register(Vision, (err) => {
     path: '/',
     method: 'GET',
     handler: (request, reply) => {
-      reply.view('home', {
-        homeVar: 'some content from handlebars',
-        items: [1,2,3]
-      })
+      reply.view('home', {myVar: ['some content','some more content','even more content']})
     }
   })
 
